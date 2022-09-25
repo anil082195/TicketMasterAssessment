@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     private var eventViewModel = EventViewModel()
     var searchedEvents = [EventModel]()
     var eventsList: [EventModel]?
-
+    
     var isSearching = false
     
     private var collectionView: UICollectionView = {
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         searchTextField.clearButtonMode = .always
         return search
     }()
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "LA Events"
@@ -90,6 +90,7 @@ extension ViewController: EventsViewModelDelegate {
 }
 
 extension ViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return isSearching ? searchedEvents.count : eventsList?.count ?? 0
     }

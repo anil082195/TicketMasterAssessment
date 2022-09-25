@@ -67,24 +67,27 @@ class EventCollectionViewCell: UICollectionViewCell {
         stackView.addArrangedSubview(lblStartDate)
         contentView.addSubview(eventImageView)
         contentView.addSubview(stackView)
-        
+        setUpConstraints()
+    }
+    
+    func setUpConstraints() {
         eventImageView.translatesAutoresizingMaskIntoConstraints = false
-            // Layout constraints for `collectionView`
-            NSLayoutConstraint.activate([
-                eventImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-                eventImageView.leftAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leftAnchor),
-                eventImageView.rightAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.rightAnchor),
-                eventImageView.heightAnchor.constraint(equalToConstant: 150)
-            ])
+        // Layout constraints for `ImageView`
+        NSLayoutConstraint.activate([
+            eventImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            eventImageView.leftAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leftAnchor),
+            eventImageView.rightAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.rightAnchor),
+            eventImageView.heightAnchor.constraint(equalToConstant: 150)
+        ])
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
-            // Layout constraints for `stackview`
-            NSLayoutConstraint.activate([
-                stackView.topAnchor.constraint(equalTo: eventImageView.bottomAnchor, constant: 0),
-                stackView.leftAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leftAnchor),
-                stackView.rightAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.rightAnchor),
-                stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-            ])
+        // Layout constraints for `stackview`
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: eventImageView.bottomAnchor, constant: 0),
+            stackView.leftAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leftAnchor),
+            stackView.rightAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.rightAnchor),
+            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+        ])
     }
     
     required init?(coder: NSCoder) {
@@ -118,16 +121,16 @@ extension EventCollectionViewCell {
     }
     
     private func convertDateFormat(inputDate: String) -> String {
-
-         let olDateFormatter = DateFormatter()
-         olDateFormatter.dateFormat = "yyyy-MM-dd"
-
-         let oldDate = olDateFormatter.date(from: inputDate)
-
-         let convertDateFormatter = DateFormatter()
-         convertDateFormatter.dateFormat = "MMM dd yyyy"
-
-         return convertDateFormatter.string(from: oldDate!)
+        
+        let olDateFormatter = DateFormatter()
+        olDateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        let oldDate = olDateFormatter.date(from: inputDate)
+        
+        let convertDateFormatter = DateFormatter()
+        convertDateFormatter.dateFormat = "MMM dd yyyy"
+        
+        return convertDateFormatter.string(from: oldDate!)
     }
-
+    
 }

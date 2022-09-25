@@ -23,7 +23,7 @@ struct HttpUtility
                     _=completionHandler(nil, error)
                 }
             }
-
+            
         }.resume()
     }
 }

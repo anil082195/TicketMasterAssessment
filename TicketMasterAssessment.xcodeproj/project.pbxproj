@@ -83,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A6A510F828E0DAD200DC00D5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A6A66CBE28DE600200A82469 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A6A510F928E0DAE200DC00D5 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				A6A66CBA28DE600200A82469 /* AppDelegate.swift */,
+				A6A66CBC28DE600200A82469 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		A6A66CAE28DE600200A82469 = {
 			isa = PBXGroup;
 			children = (
@@ -104,14 +121,13 @@
 		A6A66CB928DE600200A82469 /* TicketMasterAssessment */ = {
 			isa = PBXGroup;
 			children = (
-				A6A66CBA28DE600200A82469 /* AppDelegate.swift */,
-				A6A66CBC28DE600200A82469 /* SceneDelegate.swift */,
-				A6A66CBE28DE600200A82469 /* ViewController.swift */,
+				A6A510F928E0DAE200DC00D5 /* Delegates */,
+				A6A510F828E0DAD200DC00D5 /* Controllers */,
+				AB3DF47B28DE65AA00CB34BC /* ViewModel */,
 				AB66D33928E0BDE600ECE5B8 /* Utility */,
 				AB66D32428E0B18C00ECE5B8 /* Resources */,
 				AB3DF48B28DEAD6000CB34BC /* Fonts */,
 				AB3DF48828DEAA5E00CB34BC /* Extensions */,
-				AB3DF47B28DE65AA00CB34BC /* ViewModel */,
 				AB3DF47A28DE65A300CB34BC /* View */,
 				AB3DF47928DE659C00CB34BC /* Model */,
 				AB3DF47828DE657700CB34BC /* Services */,
