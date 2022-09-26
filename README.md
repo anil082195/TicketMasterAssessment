@@ -18,7 +18,8 @@
 ## Developed by: 
 
 https://github.com/anil082195
-Antonio Costa - anil.keshwar@gmail.com
+
+Anil Persaud - anil.keshwar@gmail.com
 
 
 
